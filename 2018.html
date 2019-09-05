@@ -18,203 +18,199 @@
 
 <body>
 <!--- Start Home section -->
-<div id="home" class="offset">
+	<div id="home" class="offset">
 
-<!--- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top always-solid">
-<div class="container-fluid">
-	<a class="navbar-brand" href="#"><img src="img/simpleLogo.png" alt=""></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-		<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Home</a>
-			</li>
-			<li class="nav-item dropdown">
-        		<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Workshops</a>
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<li class="dropdown-submenu nav-item">
-          				<a class="dropdown-item nav-item" href="2018.html">2018</a>
-          				<a class="dropdown-item nav-item" href="2017.html">2017</a>
-          				<a class="dropdown-item nav-item" href="2016.html">2016</a>
-					</li>
-				</ul>
-     	 	</li>
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Team</a>
-			</li>
-
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Contact</a>
-			</li>
-		</ul>
-	</div>
-</div>
-</nav>
-<!--- End Navigation -->
-
-
-</div>
-<!--- End Home Section -->
-
-<div id="title-heading">
-<div class="row">
-	<div class="col-12 os-animation" data-animation="fadeInLeft">
-	<h3 class="title-heading">2018 Workshops</h3>
-	<div class="title-heading-underline">
-	</div>
-</div>
-</div>
-
-<div class="row">
-  <div class="column" >
-    <h4 style = "color: #111111"><b>Learning how RFID tags work, the secret to your door access!</b></h4>
-			<p>Do you know what an RFID tag is? If not, let’s find out! RFID tag is a small chip embedded in your access cards that contains encrypted information. The main components of an RFID system is a transmitter and a receiver. The transmitter here is the RFID tag or your ID card  and the receiver is the card reader or transceiver. This can be used in home security and many other applications. RFID, short for radio-frequency identification uses the concept of electromagnetic fields to detect its unique identification number (UID). This is all done wirelessly.</p>
-			<p> Everyone was very keen on this workshop, most students sucessfully got their RFID door access system up and running. We felt like real accomplished engineers.</p>
-						<p><b>Objective:</b> Create a reader system using RFID tag and arduino.</p>
-
-						<p>
-							<b> What You'll Need: </b>
-							<ul style="font-size:15px;">
-  							<li>A computer (Mac/ Windows)</li>
-  							<li>All of the items are in this <a href="https://www.amazon.com/OSOYOO-Security-Mega2560-Learning-Components/dp/B01K6MO46C?ref_=fsclp_pl_dp_1&fbclid=IwAR0j_YPgi6IeFB7YwOc9eFM4jUcu175jbgzlksyqNV_q-HLL6bEnxLtL2WQ">kit</a> additionally you will also need an arduino uno and its USB cable</li>
-  						  <li>Motivation to make the best darn home automation project</li>
+		<!--- Navigation -->
+		<nav class="navbar navbar-expand-lg fixed-top always-solid">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><img src="img/simpleLogo.png" alt=""></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Workshops</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li class="dropdown-submenu nav-item">
+									<a class="dropdown-item nav-item" href="2018.html">2018</a>
+									<a class="dropdown-item nav-item" href="2017.html">2017</a>
+									<a class="dropdown-item nav-item" href="2016.html">2016</a>
+								</li>
 							</ul>
-						</p>
-
-						<p><b>Prelude - Installing Arduino IDE:</b> Grab it <a href="https://www.arduino.cc/en/Main/Software" target="_blank"> here</a>. There are versions available for all operating systems.</p>
-						<p> <b>Sources for DIY:</b>
-							<br></br>
-						<a href="https://www.arduino.cc/en/Reference/HomePage" target="_blank">Arduino</a>
-						<br>
-						<a href="https://www.allaboutcircuits.com/education/" target="_blank">Electronics</a>
-						<br>
-						<a href="https://electronicshobbyists.com/rfid-basics-and-rfid-module-interfacing-with-arduino/" target="_blank">RFID interfacing with Arduino</a>
-						<br>
-
-					</p>
-<div class="w3-content w3-section" style="max-width:700px">
-  <img class="mySlides" src="img/W1_4.jpg" style="width:100%">
-  <img class="mySlides" src="img/W1_3.jpg" style="width:100%">
-  <img class="mySlides" src="img/RFID.jpg" style="width:100%">
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-
-		<h4 style = "color: #111111"><b>Controlling a device through the Internet AKA Internet of Things (IOT)</b></h4>
-		<p>The Internet has allowed us to connect devices together from one end of the world to the other. In this workshop we made a simple LED circuit connection with the Adafruit Feather Huzzah ESP8266. The ESP8266, is the WiFi board that connects to the internet and sends/receives messages to control the LED lights. Students were introduced to the 4 layers of the internet which involves APIs, TCP/IP, DNS to name a few.</p>
-		<p>In this workshop, the students saw the fundamentals of how IOT can be implemented using the Huzzah ESP8266, some LEDs and Cayenne (a platform to prototype IOT projects). Check out the links and tools below to try it yourself!</p>
-
-						<p><b>Objective:</b> Control an LED using an online IOT platform</p>
-						<p>
-							<b> What You'll Need: </b>
-							<ul style="font-size:15px;">
-								<li>A computer (Mac/ Windows)</li>
-								<li>LEDs and its USB cable</li>
-								<li>Huzzah ESP8266</li>
-								<li>Jumper wires</li>
-							</ul>
-						</p>
-						<p><b>Prelude:</b> Create a free Cayenne account at <a href="https://mydevices.com/" target="_blank">mydevices.com</a>. Install <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation" target="_blank">Huzzah ESP8266 driver</a>. Make sure you set port to Adafruit Huzzah on your Arduino IDE.</p>
-
-						<p> <b>Sources for DIY:</b>
-							<br></br>
-						<a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation" target="_blank">Huzzah ESP8266 driver</a>
-						<br>
-						<a href="https://mydevices.com/article/cayenne-mqtt-standalone-esp8266-esp-01/" target="_blank">How to connect Cayenne to ESP8266. Installing board files.</a>
-						<br>
-						<a href="https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/using-arduino-ide" target="_blank">Setting up driver</a>
-						<br>
-						</p>
-						
-<div class="w3-content w3-section" style="max-width:700px">
-  <img class="mySlides2" src="img/W4_4.jpg" style="width:100%">
-  <img class="mySlides2" src="img/W4_5.jpg" style="width:100%">
-  <img class="mySlides2" src="img/W4_3.jpg" style="width:100%">
-</div>
-<script>
-var myInd = 0;
-carousel();
-
-function carousel() {
-    var j;
-    var y = document.getElementsByClassName("mySlides2");
-    for (j = 0; j < x.length; j++) {
-       y[j].style.display = "none";
-    }
-    myInd++;
-    if (myInd > y=.length) {myInd = 1}
-    y[myInd-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-  </div>
-</div>
-<!--- Start Contact Section -->
-<div id="contact" class="offset">
-
-<footer>
-<div class="row">
-
-	<div class="col-md-5">
-		<img src="img/simpleLogo.png" alt="">
-		<p>Discover a community that is creating, developing, integrating, sharing, and applying knowledge about electrical and computer technologies and sciences.</p>
-
-		<a href="https://www.facebook.com/ieee.rec/?ref=br_rs"><i class="fab fa-facebook-square"></i></a>
-		<a href="https://twitter.com/IeeeRec"><i class="fab fa-twitter-square"></i></a>
-		<a href="https://www.instagram.com/ieee_rec/?hl=en"><i class="fab fa-instagram"></i></a>
-		<a href="https://github.com/HEC-Ryerson"><i class="fab fa-github-square"></i></a>
-		<a href="https://www.linkedin.com/company/ieee-rec/about/"><i class="fab fa-linkedin"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--- End Navigation -->
 	</div>
+	<!--- End Home Section -->
+	<div id="title-heading">
+		<div class="row">
+			<div class="col-12 os-animation" data-animation="fadeInLeft">
+				<h3 class="title-heading">2018 Workshops</h3>
+				<div class="title-heading-underline">
+				</div>
+			</div>
+		</div>
+		<div class="narrow text-center">
+			<div class="row">
+				<div class="column" >
+						    <h4 style = "color: #111111"><b>Learning how RFID tags work, the secret to your door access!</b></h4>
+								<p>Do you know what an RFID tag is? If not, let’s find out! RFID tag is a small chip embedded in your access cards that contains encrypted information. The main components of an RFID system is a transmitter and a receiver. The transmitter here is the RFID tag or your ID card  and the receiver is the card reader or transceiver. This can be used in home security and many other applications. RFID, short for radio-frequency identification uses the concept of electromagnetic fields to detect its unique identification number (UID). This is all done wirelessly.</p>
+								<p> Everyone was very keen on this workshop, most students sucessfully got their RFID door access system up and running. We felt like real accomplished engineers.</p>
+								<p><b>Objective:</b> Create a reader system using RFID tag and arduino.</p>
+								<p>
+									<b> What You'll Need: </b>
+									<ul>
+										<li>A computer (Mac/ Windows)</li>
+										<li>All of the items are in this <a href="https://www.amazon.com/OSOYOO-Security-Mega2560-Learning-Components/dp/B01K6MO46C?ref_=fsclp_pl_dp_1&fbclid=IwAR0j_YPgi6IeFB7YwOc9eFM4jUcu175jbgzlksyqNV_q-HLL6bEnxLtL2WQ">kit</a> additionally you will also need an arduino uno and its USB cable</li>
+										<li>Motivation to make the best darn home automation project</li>
+									</ul>
+								</p>
+							<p><b>Prelude - Installing Arduino IDE:</b> Grab it <a href="https://www.arduino.cc/en/Main/Software" target="_blank"> here</a>. There are versions available for all operating systems.</p>
+							<p> <b>Sources for DIY:</b><br></br>
+								<a href="https://www.arduino.cc/en/Reference/HomePage" target="_blank">Arduino</a><br>
+								<a href="https://www.allaboutcircuits.com/education/" target="_blank">Electronics</a><br>
+								<a href="https://electronicshobbyists.com/rfid-basics-and-rfid-module-interfacing-with-arduino/" target="_blank">RFID interfacing with Arduino</a><br>
+							</p>
+						<div id="carouselExampleIndicators" class="carousel slide center" data-ride="carousel" data-interval="5000"style="width:50%">
+							<ol class="carousel-indicators">
+								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							</ol>
+						<div class="carousel-inner" role="listbox">
+						<!-- Slide One -->
+						<div class="carousel-item active"  alt="">  
+							<img src="img/W1_4.jpg" style="width:100%">
+						</div>
+						<!-- Slide Two -->
+						<div class="carousel-item" alt=""> 
+							<img src="img/RFID.jpg" style="width:100%">
+						</div>
+						<!-- Slide Three -->
+						<div class="carousel-item"  alt=""> 
+							<img  src="img/W1_3.jpg" style="width:100%">
+						</div>
+					</div> <!--- End Carousel Inner -->
+					<!--- Previous & Next Buttons -->
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<h4 style = "color: #111111"><b>Controlling a device through the Internet AKA Internet of Things (IOT)</b></h4>
+				<p>The Internet has allowed us to connect devices together from one end of the world to the other. In this workshop we made a simple LED circuit connection with the Adafruit Feather Huzzah ESP8266. The ESP8266, is the WiFi board that connects to the internet and sends/receives messages to control the LED lights. Students were introduced to the 4 layers of the internet which involves APIs, TCP/IP, DNS to name a few.</p>
+				<p>In this workshop, the students saw the fundamentals of how IOT can be implemented using the Huzzah ESP8266, some LEDs and Cayenne (a platform to prototype IOT projects). Check out the links and tools below to try it yourself!</p>
+				<p><b>Objective:</b> Control an LED using an online IOT platform</p>
+				<p>
+					<b> What You'll Need: </b>
+					<ul style="font-size:15px;">
+						<li>A computer (Mac/ Windows)</li>
+						<li>LEDs and its USB cable</li>
+						<li>Huzzah ESP8266</li>
+						<li>Jumper wires</li>
+					</ul>
+				</p>
+				<p><b>Prelude:</b> Create a free Cayenne account at <a href="https://mydevices.com/" target="_blank">mydevices.com</a>. Install <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation" target="_blank">Huzzah ESP8266 driver</a>. Make sure you set port to Adafruit Huzzah on your Arduino IDE.</p>
+				<p> <b>Sources for DIY:</b><br></br>
+					<a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation" target="_blank">Huzzah ESP8266 driver</a>
+					<br>
+					<a href="https://mydevices.com/article/cayenne-mqtt-standalone-esp8266-esp-01/" target="_blank">How to connect Cayenne to ESP8266. Installing board files.</a>
+					<br>
+					<a href="https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/using-arduino-ide" target="_blank">Setting up driver</a>
+					<br>
+				</p>
+				<!--- Start Carousel Image Slider -->
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000"style="width:50%">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					</ol>
+				<div class="carousel-inner" role="listbox">
+				<!-- Slide One -->
+					<div class="carousel-item active"  alt="">  
+						<img src="img/W4_4.jpg" style="width:100%">
+					</div>
+					<!-- Slide Two -->
+					<div class="carousel-item" alt=""> 
+						<img src="img/W4_5.jpg" style="width:100%">
+					</div>
+					<!-- Slide Three -->
+					<div class="carousel-item"  alt=""> 
+						<img  src="img/W4_3.jpg" style="width:100%">
+					</div>
+				</div> <!--- End Carousel Inner -->
+				<!--- Previous & Next Buttons -->
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+				</div>
+				<!--- End Carousel Image Slider-->	
+			</div>
+		</div>
+	</div>
+	<!--- Start Contact Section -->
+	<div id="contact" class="offset">
 
-	<div class="col-md-7">
-		<h3>Contact Us</h3>
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fieee.rec%2F&tabs=messages&width=500&height=250&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="800" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+	<footer>
+		<div class="row">
+			<div class="col-md-5">
+				<img src="img/simpleLogo.png" alt="">
+				<p>Discover a community that is creating, developing, integrating, sharing, and applying knowledge about electrical and computer technologies and sciences.</p>
+				<a href="https://www.facebook.com/ieee.rec/?ref=br_rs"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://twitter.com/IeeeRec"><i class="fab fa-twitter-square"></i></a>
+				<a href="https://www.instagram.com/ieee_rec/?hl=en"><i class="fab fa-instagram"></i></a>
+				<a href="https://github.com/HEC-Ryerson"><i class="fab fa-github-square"></i></a>
+				<a href="https://www.linkedin.com/company/ieee-rec/about/"><i class="fab fa-linkedin"></i></a>
+			</div>
+			<div class="col-md-7">
+				<h3>Contact Us</h3>
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fieee.rec%2F&tabs=messages&width=500&height=250&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="800" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+			</div>
+			<hr class="socket">
+		</div> <!--- End of Row -->
+	</footer> <!--- End of Footer -->
 
-</div>
-	<hr class="socket">
+	<!--- End Contact Section -->
 
-</div> <!--- End of Row -->
-</footer> <!--- End of Footer -->
+	<!--- Top Scroll -->
+	<a href="#home" class="top-scroll">
+		<i class="fas fa-angle-up"></i>
+	</a>
+	<!--- End of Top Scroll -->
 
-</div>
-<!--- End Contact Section -->
-
-<!--- Top Scroll -->
-<a href="#home" class="top-scroll">
-	<i class="fas fa-angle-up"></i>
-</a>
-<!--- End of Top Scroll -->
-
-<!--- Script Source Files -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/validator.js"></script>
-<!--- End of Script Source Files -->
-
+	<!--- Script Source Files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/waypoints.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/validator.js"></script>
+	<!--- End of Script Source Files -->
 </body>
 </html>
