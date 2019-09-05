@@ -6,8 +6,11 @@ $(document).ready(function() { //when document(DOM) loads completely.
           // checks if window is scrolled more than 300px, adds/removes solid class
           if($(this).scrollTop() > 300) { 
               $('.navbar').addClass('solid'); //add class 'solid' in any element which has class 'navbar'
+              $('.dropdown-menu').addClass('solid');
+
           } else {
               $('.navbar').removeClass('solid'); //remove class 'solid' in any element which has class 'navbar'
+			   $('.dropdown-menu').removeClass('solid');
           }
         });
 });
@@ -89,6 +92,37 @@ $(document).ready(function(){ //when document is ready
   );
 });
 
+/*========== SKILLS COUNTER ==========*/
+
+$(document).ready(function() { //when document is ready
+        $('.counter').counterUp({
+            delay: 10, //delay in milliseconds per count up
+            time: 3000 //(originally 1800) total time taken by the animation
+        });
+    });
+
+/*========== CLIENTS CAROUSEL ==========*/
+
+$(document).ready(function(){ //when document is ready
+  $("#clients-slider").owlCarousel({ //owlCarousel settings
+        items:2, //by default there are 2 slides display.
+        autoplay:true, //the slides will change automatically.
+        smartSpeed:1700, //speed of changing wil be 700
+        loop:true, //infinite loop; after the last slide, first slide starts
+        autoplayHoverPause:true, //when you put mouse over Carousel, slide changing will stop
+        responsive : { //responsiveness as screen size changes
+            // min-width: 0px
+            0 : {
+                items: 1 //on devices with width 0 to 768px show 1 slide
+            },
+            // min-width: 768px
+            768 : {
+                items: 2 //on devices with width 768px and above show show 2 slides
+            },
+        }
+  }
+  );
+});
 
 /*========== TOP SCROLL BUTTON ==========*/
 
@@ -102,3 +136,74 @@ $(document).ready(function() { //when document is ready
   });
 });
 
+
+//Optional Refresh Page at top of document on load instead of at # hash
+/*
+
+$(document).ready(function(){
+    $('html, body').scrollTop(0);
+    $(window).on('load', function() {
+    setTimeout(function(){
+        $('html, body').scrollTop(0);
+    }, 0);
+ });
+});
+
+*/
+
+//UPDATE ADDITIONS:
+
+//OPTION TO MAKE PRICING & TEAM SECTIONS COLUMN HEIGHT EQUAL
+/*
+
+$(document).ready(function(){
+
+    // Select and loop the container element of the elements you want to equalise
+    $('.row').each(function(){  
+      
+      // Cache the highest
+      var highestBox = 0;
+      
+      // Select and loop the elements you want to equalise
+      $('.card', this).each(function(){
+        
+        // If this box is higher than the cached highest then store it
+        if($(this).height() > highestBox) {
+          highestBox = $(this).height(); 
+        }
+      
+      });  
+            
+      // Set the height of all those children to whichever was highest 
+      $('.card',this).height(highestBox);
+                    
+    }); 
+
+});
+
+
+
+// OPTION TO MAKE ALL ANIMATIONS THE SAME "FADEINUP" ANIMATION ON MOBILE DEVICES
+
+$(document).ready(function() { 
+if ($(window).width() < 768 ) {
+   $("div").attr('data-animation','fadeInUp');
+}
+});
+
+// IF LINKING TO ANOTHER PAGE WITH A HASH AT THE END OF THE LINK,
+SUCH AS domain.com#services THEN USE THE FOLLOWING SMOOTH SCROLL INSTEAD
+OF THE SMOOTH SCROLL USED AT THE TOP OF THIS DOCUMENT.
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+*/
