@@ -92,38 +92,6 @@ $(document).ready(function(){ //when document is ready
   );
 });
 
-/*========== SKILLS COUNTER ==========*/
-
-$(document).ready(function() { //when document is ready
-        $('.counter').counterUp({
-            delay: 10, //delay in milliseconds per count up
-            time: 3000 //(originally 1800) total time taken by the animation
-        });
-    });
-
-/*========== CLIENTS CAROUSEL ==========*/
-
-$(document).ready(function(){ //when document is ready
-  $("#clients-slider").owlCarousel({ //owlCarousel settings
-        items:2, //by default there are 2 slides display.
-        autoplay:true, //the slides will change automatically.
-        smartSpeed:1700, //speed of changing wil be 700
-        loop:true, //infinite loop; after the last slide, first slide starts
-        autoplayHoverPause:true, //when you put mouse over Carousel, slide changing will stop
-        responsive : { //responsiveness as screen size changes
-            // min-width: 0px
-            0 : {
-                items: 1 //on devices with width 0 to 768px show 1 slide
-            },
-            // min-width: 768px
-            768 : {
-                items: 2 //on devices with width 768px and above show show 2 slides
-            },
-        }
-  }
-  );
-});
-
 /*========== TOP SCROLL BUTTON ==========*/
 
 $(document).ready(function() { //when document is ready
